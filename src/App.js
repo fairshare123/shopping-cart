@@ -14,7 +14,13 @@ function App() {
         <ShoppingCart />
       </main>
 
-      <footer className="app-footer">Dipika Aryal · Web Programming © 2026</footer>
+      <footer className="app-footer">
+        <p>Dipika Aryal · Web Programming © 2026</p>
+        <p className="photo-credits">
+          Photos from Unsplash by Kelly Sikkema, Luke Peterson, Wiser by the Mile,
+          Quokka Bottles, Brina Blum and Lucia Macedo.
+        </p>
+      </footer>
     </div>
   );
 }
