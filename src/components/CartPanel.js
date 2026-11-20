@@ -11,11 +11,22 @@ function CartPanel({ cartItems, onIncrease, onDecrease, onRemove, onClear }) {
   return (
     <aside className="cart-panel" aria-labelledby="cart-title">
       <h2 id="cart-title">
-        Your cart <span className="badge">{itemCount}</span>
+        Your cart{" "}
+        {/* The key changes with the count, so the badge "pops" each time */}
+        <span className="badge" key={itemCount}>
+          {itemCount}
+        </span>
       </h2>
 
       {cartItems.length === 0 ? (
-        <p className="empty-cart">Your cart is empty. Add a product to get started.</p>
+        <div className="empty-cart">
+          <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="9" cy="20" r="1.5" />
+            <circle cx="18" cy="20" r="1.5" />
+            <path d="M2 3h3l2.7 12.2a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L22 7H6" />
+          </svg>
+          <p>Your cart is empty. Add a product to get started.</p>
+        </div>
       ) : (
         <ul className="cart-list">
           {cartItems.map((item) => (

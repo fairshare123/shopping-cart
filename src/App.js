@@ -5,8 +5,10 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <span className="tag">WEEK 11 · REACT STATE</span>
-        <h1>Campus Corner Shop</h1>
+        <span className="tag">Week 11 · React state</span>
+        <h1>
+          Campus Corner <em>Shop</em>
+        </h1>
         <p>Student essentials, by Dipika Aryal</p>
       </header>
 
